@@ -1,15 +1,10 @@
-#include "mainwindow.h"
-
-#include <QApplication>
+#include <QCoreApplication>
 #include <QSqlDatabase>
 #include <QTcpSocket>
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    MainWindow w;
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    QTcpSocket* socket;
-    w.show();
+    QCoreApplication a(argc, argv);
+
     return a.exec();
 }
